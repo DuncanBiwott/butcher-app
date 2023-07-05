@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "685123041084",
+    "project_id": "meat-ordering",
+    "storage_bucket": "meat-ordering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685123041084:android:780fecaef3b62cc1e69039",
+        "android_client_info": {
+          "package_name": "com.example.butcher_meat_ordering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685123041084-hce94t4k4erfre4p96lcvjlo80nc79eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChgMbXYZKw_pY94HBqDwOHxR-WqR1vDfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685123041084-hce94t4k4erfre4p96lcvjlo80nc79eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
