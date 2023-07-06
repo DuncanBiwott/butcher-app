@@ -44,7 +44,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: background,
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
@@ -60,10 +60,10 @@ class _SignUpState extends State<SignUp> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Center(
+                       Center(
                           child: Text(
                         "Register",
-                        style: TextStyle(color: Colors.black, fontSize: 50),
+                        style: TextStyle(color: textColor, fontSize: 50),
                       )),
                       const SizedBox(
                         height: 20,
@@ -72,10 +72,10 @@ class _SignUpState extends State<SignUp> {
                         controller: _namecontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.text,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           label: Text(
                             "Name",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: textColor),
                           ),
                           border: OutlineInputBorder(
                             borderRadius:
@@ -98,10 +98,10 @@ class _SignUpState extends State<SignUp> {
                         controller: _emailcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           label: Text(
                             "Email",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: textColor),
                           ),
                           border: OutlineInputBorder(
                             borderRadius:
@@ -128,10 +128,10 @@ class _SignUpState extends State<SignUp> {
                         controller: _passwordcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.text,
-                        decoration: const InputDecoration(
+                        decoration:  InputDecoration(
                           label: Text(
                             "Password",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: textColor),
                           ),
                           border: OutlineInputBorder(
                             borderRadius:
@@ -156,10 +156,10 @@ class _SignUpState extends State<SignUp> {
                         controller: _cpasswordcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           label: Text(
                             "Confirm Password",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: textColor),
                           ),
                           hintText: "Confirm Password",
                           border: OutlineInputBorder(
@@ -233,7 +233,7 @@ class _SignUpState extends State<SignUp> {
                                 backgroundColor:
                                     MaterialStateProperty.all(primaryButton),
                               ),
-                              child: const Padding(
+                              child: Padding(
                                 padding: EdgeInsets.all(8),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -241,7 +241,7 @@ class _SignUpState extends State<SignUp> {
                                     Text(
                                       "Sign Up",
                                       style: TextStyle(
-                                          color: Colors.white,
+                                          color: textColor,
                                           letterSpacing: 0.5),
                                     ),
                                   ],
@@ -260,10 +260,10 @@ class _SignUpState extends State<SignUp> {
                                           firestore: widget.firestore,
                                         )));
                               }),
-                              child: const Text(
+                              child:  Text(
                                 "Login",
                                 style: TextStyle(
-                                    color: Colors.black, letterSpacing: 0.5),
+                                    color:textColor, letterSpacing: 0.5),
                               )),
                         ],
                       )

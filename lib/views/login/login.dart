@@ -42,6 +42,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: background,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -56,20 +57,22 @@ class _LoginState extends State<Login> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Center(
+                       Center(
                           child: Text(
                         "Login",
-                        style: TextStyle(color: Colors.black, fontSize: 50),
+                        style: TextStyle(color: textColor, fontSize: 50),
                       )),
                       const SizedBox(
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _emailcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
-                          label: Text("Email"),
+                        decoration:  InputDecoration(
+                          
+                          label: Text("Email",style: TextStyle(color: textColor),),
                           hintText: "Email address",
                           border: OutlineInputBorder(
                             borderRadius:
@@ -93,10 +96,12 @@ class _LoginState extends State<Login> {
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _passwordcontroller,
                         textAlign: TextAlign.start,
-                        decoration: const InputDecoration(
-                          label: Text("Password"),
+                        decoration:  InputDecoration(
+                          fillColor: textColor,
+                          label: Text("Password",style: TextStyle(color: textColor),),
                           hintText: "Password",
                           border: OutlineInputBorder(
                             borderRadius:
@@ -169,7 +174,7 @@ class _LoginState extends State<Login> {
                               ),
                               child: _isLoading
                                   ? const CircularProgressIndicator()
-                                  : const Padding(
+                                  :  Padding(
                                       padding: EdgeInsets.all(8),
                                       child: Row(
                                         mainAxisAlignment:
@@ -178,7 +183,7 @@ class _LoginState extends State<Login> {
                                           Text(
                                             "Login",
                                             style: TextStyle(
-                                                color: Colors.white,
+                                                color: textColor,
                                                 letterSpacing: 0.5),
                                           ),
                                         ],
@@ -199,13 +204,14 @@ class _LoginState extends State<Login> {
                             }),
                             child:  Text(
                               "Forgot Password?",
+                              style: TextStyle(color: textColor),
                               
                             )),
                       ),
                     
                       Row(
                         children: [
-                          const Text("Don't have an account?"),
+                           Text("Don't have an account?",style: TextStyle(color: textColor),),
                           TextButton(
                               onPressed: (() {
                                 Navigator.pushReplacement<void, void>(
@@ -219,7 +225,7 @@ class _LoginState extends State<Login> {
                                 );
                               }),
                               child:  Text(
-                                "Register"
+                                "Register",style: TextStyle(color: textColor),
                               )),
                         ],
                       )

@@ -39,6 +39,7 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: background,
       body: Stack(
         children: [
           SizedBox(
