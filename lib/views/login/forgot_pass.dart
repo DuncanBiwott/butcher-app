@@ -22,6 +22,7 @@ class _ForgotPassState extends State<ForgotPass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: background,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -41,9 +42,26 @@ class _ForgotPassState extends State<ForgotPass> {
                 ),
                 TextFormField(
                   controller: _emailcontroller,
+                  
+                  style: TextStyle(
+                      color: textColor,
+                      fontSize: 20),
                   textAlign: TextAlign.start,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                 
+                  borderSide: BorderSide(
+                    color: textColor,
+                  ),
+                ),
+                enabledBorder: OutlineInputBorder(
+                
+                  borderSide: BorderSide(
+                    color: textColor,
+                    width: 2.0,
+                  ),
+                ),
                     hintText: "Email",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(32.0)),
@@ -116,7 +134,7 @@ class _ForgotPassState extends State<ForgotPass> {
                   child:  Center(
                       child: Text(
                     "Verify",
-                    style: TextStyle(color: textColor),
+                    style: TextStyle(color: textColor,letterSpacing: 0.5),
                   )),
                 ),
               ],

@@ -51,10 +51,138 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
                   _currentPage = page;
                 });
               },
-              children: const [
-               Center(child: Text("hello"),),
-                Center(child: Text("hello"),),
-                Center(child: Text("hello"),),
+              children: [
+                Stack(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10),
+                                image: const DecorationImage(
+                                  opacity: 0.7,
+                                  image: NetworkImage(
+                                      'https://img.freepik.com/premium-photo/fresh-raw-beef-steak-isolated-white-background-with-clipping-path_228338-124.jpg?w=2000'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                             Positioned(
+                              bottom: 250,
+                              left: 100,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Goat Fresh Meat',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    '20 Suppliers',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                           Stack(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10),
+                                image: const DecorationImage(
+                                  opacity: 0.7,
+                                  image: NetworkImage(
+                                      'https://s3.envato.com/files/250987736/_MG_5079.jpg'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                             Positioned(
+                              bottom: 250,
+                              left: 100,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Goat Fresh Meat',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    '20 Suppliers',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                           Stack(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10),
+                                image: const DecorationImage(
+                                  opacity: 0.7,
+                                  image: NetworkImage(
+                                      'https://img.freepik.com/free-photo/steak-raw-fresh-meat-with-rosemary_105495-275.jpg?size=626&ext=jpg'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                             Positioned(
+                              bottom: 250,
+                              left: 100,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Goat Fresh Meat',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    '20 Suppliers',
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+          
+               
               ],
             ),
           ),
@@ -104,7 +232,8 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
                   const SizedBox(height: 16),
                   Container(
                     width: 300,
-                    child: Expanded(
+                    child: SizedBox(
+                      width: double.infinity,
                       child: ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
