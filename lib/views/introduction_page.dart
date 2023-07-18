@@ -18,17 +18,6 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  final List<String> titles = [
-    'Hotel Reservation',
-    'Restaurant Booking',
-    'Flight Reservations',
-  ];
-
-  final List<String> subtitles = [
-    'Find and book the perfect hotel for your trip',
-    'Discover and reserve top-rated restaurants',
-    'Book flights to your desired destinations',
-  ];
 
   @override
   void dispose() {
@@ -74,16 +63,18 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Goat Fresh Meat',
-                                    style: TextStyle(
-                                      color: textColor,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
+                                  Expanded(
+                                    child: Text(
+                                      'Indulge in the mouthwatering flavors of our premium-quality meat. Sourced from trusted suppliers, our meat guarantees a dining experience like no other.',
+                                      style: TextStyle(
+                                        color: textColor,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                   Text(
-                                    '20 Suppliers',
+                                    'Delicious and Tender',
                                     style: TextStyle(
                                       color: textColor,
                                       fontSize: 16,
@@ -117,16 +108,18 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Goat Fresh Meat',
-                                    style: TextStyle(
-                                      color: textColor,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
+                                  Expanded(
+                                    child: Text(
+                                      'Whether its a backyard barbecue or a special family dinner, our selection of prime meat cuts has you covered. Juicy steaks, succulent roasts, and more – elevate your meals with the finest meats.',
+                                      style: TextStyle(
+                                        color: textColor,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                   Text(
-                                    '20 Suppliers',
+                                    'Prime Cuts for Every Occasion',
                                     style: TextStyle(
                                       color: textColor,
                                       fontSize: 16,
@@ -160,16 +153,18 @@ class _IntroDuctionScreenState extends State<IntroDuctionScreen> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Goat Fresh Meat',
-                                    style: TextStyle(
-                                      color: textColor,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
+                                  Expanded(
+                                    child: Text(
+                                      'Enjoy meat that comes from ethically raised animals, ensuring the highest quality and a positive impact on the environment. Taste the difference of sustainably sourced meat.',
+                                      style: TextStyle(
+                                        color: textColor,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                   Text(
-                                    '20 Suppliers',
+                                    'Farm-Fresh and Sustainable',
                                     style: TextStyle(
                                       color: textColor,
                                       fontSize: 16,

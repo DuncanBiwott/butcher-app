@@ -1,3 +1,4 @@
+import 'package:butcher_meat_ordering/views/add_order.dart';
 import 'package:butcher_meat_ordering/views/messages.dart';
 import 'package:butcher_meat_ordering/views/order_page.dart';
 import 'package:butcher_meat_ordering/views/profile.dart';
@@ -34,7 +35,9 @@ class _HomeState extends State<Home> {
     Dashboard(auth:widget.auth, firestore: widget.firestore,),
     Messages(auth:widget.auth, firestore: widget.firestore,),
     OrderPage(userId: user!.uid, auth: widget.auth,),
+    OrderForm(auth: widget.auth, firestore: widget.firestore),
     Profile(auth: widget.auth, firestore: widget.firestore,)
+    
   
   ];
 
@@ -62,17 +65,22 @@ class _HomeState extends State<Home> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.explore,size: 20.0),
-              label: "Explore",
+              label: "Bookings",
             ),
             BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.book,size: 20.0),
               label: "My Orders",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.plus,size: 20.0),
+              label: "Add Order",
             ),
            
             BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.user,size: 20.0),
               label: "Profile",
             ),
+            
             
           ]),
       )

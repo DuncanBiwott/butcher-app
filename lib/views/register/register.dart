@@ -1,10 +1,12 @@
-import 'package:butcher_meat_ordering/constants/constants.dart';
+
 import 'package:butcher_meat_ordering/controller/Root/auth.dart';
 import 'package:butcher_meat_ordering/views/login/login.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_flushbar/flutter_flushbar.dart';
+
+import '../../constants/constants.dart';
 
 
 class SignUp extends StatefulWidget {
@@ -50,7 +52,6 @@ class _SignUpState extends State<SignUp> {
           child: Padding(
             padding: const EdgeInsets.only(top: 16.0),
             child: Container(
-              color: Colors.white,
               height: 700,
               width: 400,
               child: Padding(
@@ -69,6 +70,7 @@ class _SignUpState extends State<SignUp> {
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _namecontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.text,
@@ -77,11 +79,11 @@ class _SignUpState extends State<SignUp> {
                             "Name",
                             style: TextStyle(color: textColor),
                           ),
-                          border: OutlineInputBorder(
+                          border: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(8.0)),
                           ),
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                               vertical: 10.0, horizontal: 20.0),
                         ),
                         validator: (value) {
@@ -95,6 +97,7 @@ class _SignUpState extends State<SignUp> {
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _emailcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.emailAddress,
@@ -103,7 +106,7 @@ class _SignUpState extends State<SignUp> {
                             "Email",
                             style: TextStyle(color: textColor),
                           ),
-                          border: OutlineInputBorder(
+                          border: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(8.0)),
                           ),
@@ -125,6 +128,7 @@ class _SignUpState extends State<SignUp> {
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _passwordcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.text,
@@ -153,6 +157,7 @@ class _SignUpState extends State<SignUp> {
                         height: 20,
                       ),
                       TextFormField(
+                        style: TextStyle(color: textColor),
                         controller: _cpasswordcontroller,
                         textAlign: TextAlign.start,
                         keyboardType: TextInputType.emailAddress,
@@ -251,7 +256,8 @@ class _SignUpState extends State<SignUp> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          const Text("Already have an account?"),
+                           Text("Already have an account?",
+                                style: TextStyle(color: textColor)),
                           TextButton(
                               onPressed: (() {
                                 Navigator.of(context).push(MaterialPageRoute(
